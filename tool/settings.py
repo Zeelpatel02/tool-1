@@ -30,7 +30,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '127.0.0.1'
-    'rehome-pdf-app.herokuapp.com'
+    '60b8d39dcd21fe52dbccf361--gracious-galileo-e9c345.netlify.app/'
 ]
 
 
