@@ -30,7 +30,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '127.0.0.1'
-    '60b8d39dcd21fe52dbccf361--gracious-galileo-e9c345.netlify.app/'
+    '60b8d39dcd21fe52dbccf361--gracious-galileo-e9c345.netlify.app'
 ]
 
 
