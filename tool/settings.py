@@ -30,8 +30,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '127.0.0.1'
-    'jp738317-tool.zeet.app'
-    'jp738317-tool-main.zeet.app'
+    'rehome-pdf-app.herokuapp.com'
 ]
 
 
