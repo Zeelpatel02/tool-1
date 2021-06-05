@@ -23,7 +23,7 @@
           <li class="navbar-item"><button onClick="initializeViewer('{% static 'pdfs/2018035DCD1008A0.pdf' % }')" class="navbar-button button-primary">bug1.pdf</button></li>
           <li class="navbar-item"><button onClick="initializeViewer('{% static 'pdfs/2018035DCD03003A4.pdf' % }')" class="navbar-button button-primary">bug2.pdf</button></li>
           <li class="navbar-item"><button onClick="addStamp()" class="navbar-button button">Stamp it!</button></li>
-          <li class="navbar-itemr mobile"><a class="navbar-link" href="{% static 'https://github.com/wallabyway/offline-pdf-markup' % }">Github</a></li>
+          <li class="navbar-itemr mobile"><a class="navbar-link" href="https://github.com/wallabyway/offline-pdf-markup">Github</a></li>
         </ul>
       </div>
     </nav>
@@ -31,8 +31,8 @@
   <div id="forgeViewer"></div>
 </body>
 
-<link rel="stylesheet" href="{% static './offline.min.css' % }" type="text/css">
-<script language="JavaScript" src="{% static './offlineapi.js' % }"></script>
+<link rel="stylesheet" href="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/style.min.css" type="text/css">
+<script language="JavaScript" src="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/viewer3D.js"></script>
 <script>
 
 let viewer, markup;
