@@ -29,7 +29,6 @@ SECRET_KEY = 'django-insecure-#27wnp#78y04az0k6hmpma89e7iqf8b&1oww+358aw*k15zyz1
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'https://rehome-pdf-app.herokuapp.com/'
     'rehome-pdf-app.herokuapp.com'
 ]
 
