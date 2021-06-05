@@ -16,12 +16,12 @@
     <nav class="navbar">
       <div class="container">
         <ul class="navbar-list">
-          <li class="navbar-item"><img class="navbar-img" src="logo.png"/></li>
-          <li class="navbar-item"><button onClick="initializeViewer('{% static 'pdfs/qcad1.pdf' % }')" class="navbar-button button-primary">floor1.pdf</button></li>
-          <li class="navbar-item"><button onClick="initializeViewer({% static ''pdfs/wood.pdf' % }')" class="navbar-button button-primary">Wood.pdf</button></li>
-          <li class="navbar-item"><button onClick="initializeViewer('{% static 'pdfs/qcad3.pdf' % }')" class="navbar-button button-primary">section.pdf</button></li>
-          <li class="navbar-item"><button onClick="initializeViewer('{% static 'pdfs/2018035DCD1008A0.pdf' % }')" class="navbar-button button-primary">bug1.pdf</button></li>
-          <li class="navbar-item"><button onClick="initializeViewer('{% static 'pdfs/2018035DCD03003A4.pdf' % }')" class="navbar-button button-primary">bug2.pdf</button></li>
+          <li class="navbar-item"><img class="navbar-img" src="static/logo.png"/></li>
+          <li class="navbar-item"><button onClick="initializeViewer('static/pdfs/qcad1.pdf')" class="navbar-button button-primary">floor1.pdf</button></li>
+          <li class="navbar-item"><button onClick="initializeViewer('static/pdfs/wood.pdf')" class="navbar-button button-primary">Wood.pdf</button></li>
+          <li class="navbar-item"><button onClick="initializeViewer('static/pdfs/qcad3.pdf')" class="navbar-button button-primary">section.pdf</button></li>
+          <li class="navbar-item"><button onClick="initializeViewer('static/pdfs/2018035DCD1008A0.pdf')" class="navbar-button button-primary">bug1.pdf</button></li>
+          <li class="navbar-item"><button onClick="initializeViewer('static/pdfs/2018035DCD03003A4.pdf')" class="navbar-button button-primary">bug2.pdf</button></li>
           <li class="navbar-item"><button onClick="addStamp()" class="navbar-button button">Stamp it!</button></li>
           <li class="navbar-itemr mobile"><a class="navbar-link" href="https://github.com/wallabyway/offline-pdf-markup">Github</a></li>
         </ul>
@@ -87,8 +87,8 @@ function addStamp() {
 
 
 if ('xserviceWorker' in navigator)
-  navigator.serviceWorker.register('{% static 'offline-worker.js' % }');
+  navigator.serviceWorker.register('static/offline-worker.js');
 
-initializeViewer('{% static 'pdfs/qcad1.pdf' % }');
+initializeViewer('static/pdfs/qcad1.pdf');
 
 </script>
