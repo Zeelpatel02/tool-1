@@ -26,10 +26,11 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 SECRET_KEY = 'django-insecure-#27wnp#78y04az0k6hmpma89e7iqf8b&1oww+358aw*k15zyz1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
-    'rehome-pdf-app.herokuapp.com'
+    '127.0.0.1',
+    'rehome-pdf-app.herokuapp.com',
 ]
 
 
@@ -130,7 +131,11 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR / "static"
 ]
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+STATIC_ROOT = "/static/"
+
+
+MEDIA_ROOT = 'media'
+MEDIA_URL = '/media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
