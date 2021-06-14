@@ -5,6 +5,9 @@
 	<title>fast PDF viewer with markup and offline support</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <link rel="icon" href="data:,">
+  <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 	<link rel="stylesheet" href="{% static './skeleton.min.css' %}">
   <style> .lmv-markup-gui-toolbar {background-color: rgba(200,230,255,0.85)}</style>
 </head>
@@ -26,19 +29,32 @@
 </style>
   <div class="container">
     <nav class="navbar">
-      <div class="container">
-
-        <ul class="navbar-list scroll">
-          <li class="navbar-item"><h2><b>Rehome &nbsp;&nbsp;</b></h2></li>
+      <div class="btn-lg float-right">
+      <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown button
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             {% if pdfs %}
                 {% for pdf in pdfs %}
-          <li class="navbar-item"><button onClick="initializeViewer('media/{{pdf}}')" class="navbar-button button-primary"><h6>{{ pdf }}</h6></button></li>
+            <a class="dropdown-item"><button onClick="initializeViewer('media/{{pdf}}')" class="navbar-button button-primary"><h6 size="30">{{ pdf }}</h6></button></a>
                 {% endfor %}
             {% else %}
                 <p>No pdf available.</p>
             {% endif %}
-          <li class="navbar-itemr mobile"><a class="navbar-link" href="{{ var }}">click</a></li>
-        </ul>
+          </div>
+      </div>
+<!--        <ul class="navbar-list scroll">-->
+<!--          <li class="navbar-item"><h2><b>Rehome &nbsp;&nbsp;</b></h2></li>-->
+<!--            {% if pdfs %}-->
+<!--                {% for pdf in pdfs %}-->
+<!--          <li class="navbar-item"><button onClick="initializeViewer('media/{{pdf}}')" class="navbar-button button-primary"><h6>{{ pdf }}</h6></button></li>-->
+<!--                {% endfor %}-->
+<!--            {% else %}-->
+<!--                <p>No pdf available.</p>-->
+<!--            {% endif %}-->
+<!--          <li class="navbar-itemr mobile"><a class="navbar-link" href="{{ var }}">click</a></li>-->
+<!--        </ul>-->
       </div>
     </nav>
   </div>
@@ -54,6 +70,13 @@
   <div id="forgeViewer"></div>
 <link rel="stylesheet" href="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/style.min.css" type="text/css">
 <script language="JavaScript" src="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/viewer3D.js"></script>
+
+ <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 </body>
 
 
