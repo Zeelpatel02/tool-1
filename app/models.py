@@ -3,8 +3,8 @@ from django.db import models
 # Create your models here.
 class FilesUpload(models.Model):
     file = models.FileField()
-    def __str__(self):
-        return self.file
+#     def __str__(self):
+#         return self.file
 
 from django.db.models.signals import pre_delete
 from django.dispatch.dispatcher import receiver
