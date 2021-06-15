@@ -5,5 +5,5 @@ from django.conf import settings
 
 urlpatterns = [
     path('',views.index, name="Home"),
-    path('tool',views.tool, name="Tool"),
+    path('tool/<int:num>',views.tool, name="Tool"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
