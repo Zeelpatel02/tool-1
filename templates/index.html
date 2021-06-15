@@ -12,8 +12,8 @@
   </head>
   <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#"><h2>Rehome</h2></a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-light">
+    <a class="navbar-brand" href="https://rehome.build/"><img src="https://rehome.studio/wp-content/uploads/2021/01/rehome-beta.gif"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -21,34 +21,34 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/about">About Us</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="/services" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Services
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="/services">Ice Cream</a>
-          <a class="dropdown-item" href="#">Softy</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Family Pack</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/contact">Contact Us</a>
-      </li>
-
+<!--      <li class="nav-item active">-->
+<!--        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>-->
+<!--      </li>-->
+<!--      <li class="nav-item">-->
+<!--        <a class="nav-link" href="/about">About Us</a>-->
+<!--      </li>-->
+<!--      <li class="nav-item dropdown">-->
+<!--        <a class="nav-link dropdown-toggle" href="/services" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+<!--          Services-->
+<!--        </a>-->
+<!--        <div class="dropdown-menu" aria-labelledby="navbarDropdown">-->
+<!--          <a class="dropdown-item" href="/services">Ice Cream</a>-->
+<!--          <a class="dropdown-item" href="#">Softy</a>-->
+<!--          <div class="dropdown-divider"></div>-->
+<!--          <a class="dropdown-item" href="#">Family Pack</a>-->
+<!--        </div>-->
+<!--      </li>-->
+<!--      <li class="nav-item">-->
+<!--        <a class="nav-link" href="/contact">Contact Us</a>-->
+<!--      </li>-->
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Contact Us</button>&nbsp; &nbsp;
   </div>
 </nav>
+<div class="alert alert-success" role="alert">
+    <center>{{messg}}</center>
+</div>
 <div class="container">
     <hr>
     <center>
@@ -87,7 +87,7 @@ a:active {
 </style>
         <h4>First upload your file and then use the tool.</h4>
         <h4>Note: you have already uploaded your file then you can use the tool</h4>
-        <a href="/tool"><button type="submit" class="btn btn-primary">Use The Tool</button></a>
+        <a href="/tool/1"><button type="submit" class="btn btn-primary">Use The Tool</button></a>
         <div>
             {% if pdfs %}
                 {% for pdf in pdfs %}
