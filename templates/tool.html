@@ -2,7 +2,7 @@
 
 <head>
 	<meta charset="utf-8" />
-	<title>Fast PDF Viewer With Markup</title>
+	<title>fast PDF viewer with markup and offline support</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <link rel="icon" href="data:,">
   <!-- Bootstrap CSS -->
@@ -37,8 +37,8 @@
 				}
 			}
 		</script>
-	    
-	    {% if back == 0 %}
+
+            {% if back == 0 %}
             <a href="/tool/{{next}}"><button type="submit" class="btn btn-primary">Next</button></a>
 
             {% elif next == lastnum %}
@@ -48,7 +48,7 @@
             <a href="/tool/{{back}}"><button type="submit" class="btn btn-primary">Previous</button></a>
             <a href="/tool/{{next}}"><button type="submit" class="btn btn-primary">Next</button></a>
             {% endif %}
-	    
+
       <div class="btn-lg float-right mr-5">
       <div class="dropdown mr-5">
                         <style>
@@ -67,11 +67,6 @@
               {% for pdf,i in lpdf %}
               <a class="dropdown-item" href="/tool/{{i}}">{{ pdf }}</a>
                 {% endfor %}
-<!--              onClick="initializeViewer('media/{{pdf}}');"-->
-
-
-
-
             {% else %}
                 <p>No pdf available.</p>
             {% endif %}
@@ -90,6 +85,7 @@
 <!--          <li class="navbar-itemr mobile"><a class="navbar-link" href="{{ var }}">click</a></li>-->
 <!--        </ul>-->
       </div>
+
     </nav>
   </div>
 <!--          <div>-->
@@ -170,6 +166,6 @@ function initializeViewer(pdf) {
 if ('xserviceWorker' in navigator)
   navigator.serviceWorker.register('static/offline-worker.js');
 
-initializeViewer('https://rehome-pdf-app.herokuapp.com/media/{{ var }}');
+initializeViewer('http://127.0.0.1:8000/media/{{ var }}');
 
 </script>
