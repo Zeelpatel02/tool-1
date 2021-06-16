@@ -28,7 +28,7 @@ def tool(request, num):
     pdf_list = os.listdir(path + '/')
     num = num
     zippedlist = zip(pdf_list, range(1,len(pdf_list)+1))
-    context = {'pdfs' : pdf_list[::-1], "var" : pdf_list[int(num-1)] , "lpdf" : zippedlist}
+    context = {'pdfs' : pdf_list[::-1], "var" : pdf_list[int(num-1)] , "lpdf" : zippedlist, "next" : num+1, "back" : num-1 ,"lastnum" : len(pdf_list)+1}
     return render(request, 'tool.html', context)
 
 
