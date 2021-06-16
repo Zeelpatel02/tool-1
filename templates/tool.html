@@ -166,6 +166,6 @@ function initializeViewer(pdf) {
 if ('xserviceWorker' in navigator)
   navigator.serviceWorker.register('static/offline-worker.js');
 
-initializeViewer('http://127.0.0.1:8000/media/{{ var }}');
+initializeViewer('https://rehome-pdf-app.herokuapp.com/media/{{ var }}');
 
 </script>
