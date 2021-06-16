@@ -37,6 +37,18 @@
 				}
 			}
 		</script>
+	    
+	    {% if back == 0 %}
+            <a href="/tool/{{next}}"><button type="submit" class="btn btn-primary">Next</button></a>
+
+            {% elif next == lastnum %}
+            <a href="/tool/{{back}}"><button type="submit" class="btn btn-primary">Previous</button></a>
+
+            {% else %}
+            <a href="/tool/{{back}}"><button type="submit" class="btn btn-primary">Previous</button></a>
+            <a href="/tool/{{next}}"><button type="submit" class="btn btn-primary">Next</button></a>
+            {% endif %}
+	    
       <div class="btn-lg float-right mr-5">
       <div class="dropdown mr-5">
                         <style>
