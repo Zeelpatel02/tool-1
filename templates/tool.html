@@ -28,7 +28,11 @@
             }
 </style>
   <div class="container">
-    <nav class="navbar mx-3">
+
+    <div class="row">
+
+
+        <div class="col">
         <a class="navbar-brand" href="https://rehome.build/"><img src="https://rehome.studio/wp-content/uploads/2021/01/rehome-beta.gif" height="50px" width="210px"></a>
       <script type="text/javascript">
 			function refreshPage(){
@@ -39,18 +43,32 @@
 		</script>
 
             {% if back == 0 %}
-            <a href="/tool/{{next}}"><button type="submit" class="btn btn-primary">Next</button></a>
+            <a href="/tool/{{next}}"><button type="submit" class="btn btn-primary">Next Pdf</button></a>
 
             {% elif next == lastnum %}
-            <a href="/tool/{{back}}"><button type="submit" class="btn btn-primary">Previous</button></a>
+            <a href="/tool/{{back}}"><button type="submit" class="btn btn-primary">Previous Pdf</button></a>
 
             {% else %}
-            <a href="/tool/{{back}}"><button type="submit" class="btn btn-primary">Previous</button></a>
-            <a href="/tool/{{next}}"><button type="submit" class="btn btn-primary">Next</button></a>
+            <a href="/tool/{{back}}"><button type="submit" class="btn btn-primary">Previous Pdf</button></a>
+            <a href="/tool/{{next}}"><button type="submit" class="btn btn-primary">Next Pdf</button></a>
             {% endif %}
+        </div>
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Pdf Pages
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      {% for p in page %}
+        <a class="dropdown-item" href="/tool/{{num}}?page={{p}}">page={{p}}</a>
+      {% endfor %}
+  </div>
+</div>
 
-      <div class="btn-lg float-right mr-5">
-      <div class="dropdown mr-5">
+
+
+      <div class="btn-lg col float-right mr-5">
+
+        <div class="dropdown float-right mr-5">
                         <style>
                   a:link {
                         color: Green;
@@ -71,22 +89,12 @@
                 <p>No pdf available.</p>
             {% endif %}
           </div>
+        </div>
+
       </div>
 
-<!--        <ul class="navbar-list scroll">-->
-<!--          <li class="navbar-item"><h2><b>Rehome &nbsp;&nbsp;</b></h2></li>-->
-<!--            {% if pdfs %}-->
-<!--                {% for pdf in pdfs %}-->
-<!--          <li class="navbar-item"><button onClick="initializeViewer('media/{{pdf}}')" class="navbar-button button-primary"><h6>{{ pdf }}</h6></button></li>-->
-<!--                {% endfor %}-->
-<!--            {% else %}-->
-<!--                <p>No pdf available.</p>-->
-<!--            {% endif %}-->
-<!--          <li class="navbar-itemr mobile"><a class="navbar-link" href="{{ var }}">click</a></li>-->
-<!--        </ul>-->
-      </div>
 
-    </nav>
+    </div>
   </div>
 <!--          <div>-->
 <!--            {% if pdfs %}-->
